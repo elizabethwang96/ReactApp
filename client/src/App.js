@@ -1,10 +1,18 @@
+/* eslint-disable no-unused-vars */
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginSignup from "./LoginPage/LoginSignup";
+import Message from "./MessagePage/Message";
 
 function App() {
   return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<LoginSignup />} />
+        <Route path="login" element={<LoginSignup />} />
+        <Route path="message" element={<Message />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
